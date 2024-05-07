@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mis 15 años</title>
+    <link rel="stylesheet" type="text/css" href="theme.css"> 
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    
+    <header class="header">
+      <h1 class="heading">
+        Mis 15 años
+        <span class="heading-subtext">Rosseling Gabriela Quezada Quintanilla</span>
+      </h1>
+    </header>
+    <a data-scroll class="fixed-button" href="#confirmar" id="rsvpButton">Confirmar</a> 
+    <section class="section">
+      <audio controls autoplay loop>
+        <source src="./cancion.mp3" type="audio/mp3">
+      </audio>
+      <p>Con gran ilusión y alegría, me preparo para celebrar un momento muy especial en mi vida mis 15 años. Esta ocasión marca el inicio de una nueva etapa, y sería un honor contar con tu presencia para hacer este día aún más memorable.
+       </p> 
+        <p>Te invito cordialmente a unirte a la celebración de mis 15 años, un día lleno de magia, alegría y agradecimiento por las bendiciones recibidas. Vamos a compartir momentos inolvidables, bailar, reír, y sobre todo, agradecer por el camino recorrido y por los sueños que están por venir.</p>
+        <p>
+          Tu presencia sería el regalo más especial para mí en este día tan importante. Por favor, confirma tu asistencia.
+        </p>
+    </section>
+      <h2 class="sub-heading">Detalles</h2>
+      <div class="details">
+        <i class="fas fa-calendar-check"></i>
+        <h3 class="details-heading">Cuando</h3>
+        <p>Sábado 27 de abril</p>
+        <div id="contador">
+          <div class="tiempo" id="dias"></div>
+          <div class="puntos">:</div>
+          <div class="tiempo" id="horas"></div>
+          <div class="puntos">:</div>
+          <div class="tiempo" id="minutos"></div>
+          <div class="puntos">:</div>
+          <div class="tiempo" id="segundos"></div>
+      </div>
+      <div class="details">
+        <i class="fas fa-church"></i>
+        <h3 class="details-heading">Ceremonia Religiosa</h3>
+        <p>Hora: 5:00 pm</p>
+        <button class="btn-moderno" onclick="verUbicacionParroquia()">Parroquia Espíritu Santo</button>
+      </div>
+      <div class="details">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3 class="details-heading">Recepción</h3>
+        <p>Hora: 7:00 pm</p>
+        <button class="btn-moderno" onclick="verUbicacionRecepcion()">Finca donde Pérez</button>
+      </div>
+      <div class="details">
+        <i class="fas fa-male fa-female"></i>
+        <i class="fas fa-female"></i>
+        <h3 class="details-heading">Código de vestimenta</h3>
+        <p>Formal</p>
+      </div>
+      <div class="details">
+        <i class="fas fa-envelope"></i>
+        <h3 class="details-heading">Lluvia de sobres</h3>
+      </div>
+      <h3 class="sub-heading">Invitados foráneos</h3>
+      <p>Sugerencia de hospedajes</p>
+      <div class="details">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3 class="details-heading">Hotel Casa Blanca</h3>
+        <button class="btn-moderno" onclick="verUbicacionHospedajeCasaBlanca()">Ver Ubicación</button>
+      </div>
+
+      <div class="details">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3 class="details-heading">Hotel Las Palmas</h3>
+        <button class="btn-moderno" onclick="verUbicacionHospedajeLasPalmas()">Ver Ubicación</button>
+      </div>
+
+      <div class="details">
+        <i class="fab fa-whatsapp fa-3x"></i>
+        <h3 class="details-heading">Confirmar Asistencia</h3>
+        <button id='confirmar' class="btn-moderno" onclick="confirmarAsistencia()">Confirmar por WhatsApp</button>
+      </div>
+      
+      <div class="details">
+        <i class="fa fa-bookmark fa-3x" aria-hidden="true"></i>
+        <h3 class="details-heading">Guardar Recordatorio</h3>
+        <button id='confirmar' class="btn-moderno" onclick="guardarRecordatorio()">Guardar</button>
+      </div>
+      
+      <h3 class="sub-heading">Galeria de imagenes</h3>
+      </section>
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="./img/imagen1.jpg" alt="Imagen 1">
+            <img src="./img/imagen2.jpg" alt="Imagen 2">
+            <img src="./img/imagen3.jpg" alt="Imagen 2">
+            <img src="./img/imagen4.jpg" alt="Imagen 2">
+            <img src="./img/imagen5.jpg" alt="Imagen 2">
+            <img src="./img/imagen6.jpg" alt="Imagen 2">
+            <img src="./img/imagen7.jpg" alt="Imagen 2">
+          </div>
+        </div>
+        
+    
+    <footer class="footer">
+      <p>© 2024 by Luis Alcides.</p>
+    </footer>
+    
+    <script src="./js/smooth-scroll.polyfills.min.js"></script>
+    <script defer>
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var rsvpButton = document.getElementById('rsvpButton')
+      rsvpButton.addEventListener('click',hideButton,false);
+
+      function hideButton() {
+        rsvpButton.style.display = 'none';
+      }   
+    </script>
+  </body>
+</html>
